@@ -17,7 +17,7 @@ pipeline {
     }
     //build
     stages {
-        stage('Init') {
+        stage('Init'){
             steps {
                 sh"""
                     cd vpc
@@ -33,7 +33,7 @@ pipeline {
                 """
             }
         }
-        stage('Deploy') {
+        stage('Deploy'){
             when {
                 expression {
                 params.action == 'apply'        
